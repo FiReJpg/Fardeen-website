@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#142523">
+  <meta name="description" content="Truck Ventures provides truck dispatching across the USA. Discover dispatch support for owner-operators and fleet owners, and tell us about your trucking business.">
+  <title>Truck Ventures | Your road. Our commitment.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="assets/american-truck.jpg">
+  <script>
+    (() => {
+      let savedTheme;
+      try { savedTheme = localStorage.getItem('truck-ventures-theme'); } catch {}
+      const dark = savedTheme === 'dark' || (savedTheme !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="form-config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="truck" viewBox="0 0 32 32"><path d="M3 8h17v16H3zM20 14h5l5 6v4H20M24 15v6h5"/><circle cx="8" cy="25" r="3"/><circle cx="25" cy="25" r="3"/></symbol>
+    <symbol id="route" viewBox="0 0 32 32"><circle cx="7" cy="7" r="3"/><circle cx="25" cy="25" r="3"/><path d="M7 10v10a5 5 0 0 0 10 0v-8a4 4 0 0 1 8 0v10"/></symbol>
+    <symbol id="rates" viewBox="0 0 32 32"><path d="m4 23 8-8 6 4 10-12M21 7h7v7M5 28h23"/></symbol>
+    <symbol id="document" viewBox="0 0 32 32"><path d="M7 3h12l6 6v20H7zM18 3v8h7M12 16h8m-8 5h8"/></symbol>
+    <symbol id="headset" viewBox="0 0 32 32"><path d="M5 18v-3a11 11 0 0 1 22 0v8a5 5 0 0 1-5 5h-4M5 14h4v10H5a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2ZM27 14h-4v10h4a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2Z"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar"><div class="container topbar-inner"><span><span class="status-dot"></span> Moving American businesses forward.</span><span>Truck dispatching across the USA <span aria-hidden="true">↗</span></span></div></div>
+  <header class="site-header">
+    <div class="container navigation">
+      <a class="brand" href="#home" aria-label="Truck Ventures home"><svg class="brand-mark" viewBox="0 0 46 42" aria-hidden="true"><path d="M2 6h39l-6 9H24L11 37H0L14 15H2z"/><path d="m27 20-9 17h11l15-25H34z"/></svg><span>TRUCK<span class="brand-second">VENTURES<span class="brand-dot">.</span></span></span></a>
+      <nav id="main-nav" aria-label="Main navigation"><a href="#about">About us</a><a href="#services">Our services</a><a href="#equipment">Who we help</a><a href="#how-it-works">How it works</a></nav>
+      <a class="button button-dark nav-cta" href="#contact">Let’s talk dispatch <svg class="icon"><use href="#arrow"/></svg></a>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><svg class="icon moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.1A8.5 8.5 0 0 1 10.9 3.5a8.5 8.5 0 1 0 9.6 9.6Z"/></svg><svg class="icon sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation"><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-slides" aria-hidden="true">
+        <img class="hero-image is-active" src="assets/american-truck.jpg" alt="" fetchpriority="high" width="1920" height="1280">
+        <img class="hero-image" src="assets/highway-truck.jpg" alt="" decoding="async" width="1920" height="1280">
+        <img class="hero-image" src="assets/freight-highway.jpg" alt="" decoding="async" width="1920" height="1280">
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-dispatch-map dispatch-visual" aria-hidden="true">
+        <span class="hero-map-eyebrow"><span></span> COAST-TO-COAST DISPATCH</span>
+        <svg viewBox="0 0 975 610" focusable="false">
+          <image href="assets/us-dispatch-map.svg" width="975" height="610"/>
+          <g class="hero-map-routes">
+            <path id="hero-route-north" class="route-line" d="M86.9 363.2Q290 170 638.2 226.1Q760 130 869.7 215.8"/>
+            <path id="hero-route-south" class="route-line secondary" d="M86.9 363.2Q280 450 482.9 440.5Q600 375 714.9 405.1Q810 350 869.7 215.8"/>
+            <path id="hero-route-west" class="route-line secondary" d="M97.7 46.2Q375 50 638.2 226.1"/>
+          </g>
+          <g class="route-beacons hero-map-beacons"><circle cx="86.9" cy="363.2" r="12"/><circle cx="482.9" cy="440.5" r="12"/><circle cx="638.2" cy="226.1" r="12"/><circle cx="869.7" cy="215.8" r="12"/></g>
+          <g class="route-packet"><circle class="route-packet-halo" r="12"/><circle class="route-packet-core" r="5"/><animateMotion dur="12s" begin="-3s" repeatCount="indefinite" calcMode="paced"><mpath href="#hero-route-north"/></animateMotion></g>
+          <g class="route-packet"><circle class="route-packet-halo" r="12"/><circle class="route-packet-core" r="5"/><animateMotion dur="12s" begin="-9s" repeatCount="indefinite" calcMode="paced"><mpath href="#hero-route-north"/></animateMotion></g>
+          <g class="route-packet"><circle class="route-packet-halo" r="12"/><circle class="route-packet-core" r="5"/><animateMotion dur="15s" begin="-5s" repeatCount="indefinite" calcMode="paced"><mpath href="#hero-route-south"/></animateMotion></g>
+          <g class="route-packet"><circle class="route-packet-halo" r="12"/><circle class="route-packet-core" r="5"/><animateMotion dur="14s" begin="-4s" repeatCount="indefinite" calcMode="paced"><mpath href="#hero-route-west"/></animateMotion></g>
+          <g class="hero-map-hubs"><circle cx="97.7" cy="46.2" r="6"/><circle cx="86.9" cy="363.2" r="7"/><circle cx="482.9" cy="440.5" r="7"/><circle cx="638.2" cy="226.1" r="7"/><circle cx="714.9" cy="405.1" r="6"/><circle cx="869.7" cy="215.8" r="7"/></g>
+          <g class="hero-map-labels"><text x="111" y="37">SEATTLE</text><text x="104" y="386">LOS ANGELES</text><text x="483" y="471" text-anchor="middle">DALLAS</text><text x="638" y="204" text-anchor="middle">CHICAGO</text><text x="715" y="434" text-anchor="middle">ATLANTA</text><text x="865" y="194" text-anchor="middle">NEW YORK</text></g>
+        </svg>
+      </div>
+      <div class="container hero-content">
+        <div class="eyebrow light"><span></span> YOUR PARTNER ON EVERY MILE</div>
+        <h1 id="hero-title">You drive.<br>We handle<br><span>the rest.</span></h1>
+        <p>More time on the road. Less time chasing loads.<br class="desktop-break"> Truck dispatching built around you, your truck,<br class="desktop-break"> and where you want to go.</p>
+        <div class="hero-actions"><a href="#contact" class="button button-lime">Keep your business moving <svg class="icon"><use href="#arrow"/></svg></a><a href="#services" class="text-link">Explore our services <span>↗</span></a></div>
+        <div class="hero-footnote"><svg class="icon"><use href="#pin"/></svg> One truck or a growing fleet. We’re in your corner.</div>
+      </div>
+      <div class="hero-side-label">BUILT FOR THE LONG HAUL <span></span></div>
+      <div class="hero-controls" role="group" aria-label="Hero slideshow controls" hidden>
+        <span class="slide-count" aria-hidden="true">01 / 03</span>
+        <div class="slide-dots"><button type="button" class="slide-dot is-active" aria-label="Show truck photo 1" aria-pressed="true"></button><button type="button" class="slide-dot" aria-label="Show truck photo 2" aria-pressed="false"></button><button type="button" class="slide-dot" aria-label="Show truck photo 3" aria-pressed="false"></button></div>
+        <button type="button" class="slide-pause" aria-label="Pause slideshow" aria-pressed="false"><span aria-hidden="true">Ⅱ</span></button>
+      </div>
+      <div class="hero-bottom"><div class="container hero-bottom-inner"><span>YOUR ROAD. OUR COMMITMENT.</span><a href="#about">Discover Truck Ventures <span aria-hidden="true">↓</span></a></div></div>
+    </section>
+    <div class="benefit-strip"><div class="container benefits"><div><svg class="icon"><use href="#route"/></svg><span>Nationwide dispatch</span></div><div><svg class="icon"><use href="#headset"/></svg><span>People-first support</span></div><div><svg class="icon"><use href="#truck"/></svg><span>Owner-operators & fleets</span></div><div><svg class="icon"><use href="#document"/></svg><span>Less paperwork. More road.</span></div></div></div>
+    <section id="about" class="section about-section">
+      <div class="container about-grid">
+        <div class="about-photo"><img src="assets/logistics.jpg" alt="A warehouse operator preparing freight for transport" loading="lazy" width="1200" height="800"><div class="photo-caption"><span class="caption-mark">↗</span><div>More than dispatch.<br><strong>A partner in your next move.</strong></div></div><span class="photo-tag">DRIVEN BY YOUR BUSINESS</span></div>
+        <div class="about-copy"><div class="eyebrow"><span></span> THE TRUCK VENTURES WAY</div><h2>Your business.<br>Our driving force.</h2><p>Life on the road takes focus. Finding the next load, working through rates, and keeping up with paperwork shouldn’t take it away.</p><p>Truck Ventures brings dispatch support to drivers, owner-operators, and fleet owners across the USA. We work with your routes, your equipment, and your goals—so you can focus on the miles ahead.</p><div class="about-points"><div><svg class="icon"><use href="#check"/></svg> Dispatch that fits your operation</div><div><svg class="icon"><use href="#check"/></svg> Clear communication from start to finish</div><div><svg class="icon"><use href="#check"/></svg> A real relationship, beyond the load</div></div><a href="#contact" class="text-link dark-link">Get to know your dispatch partner <span>↗</span></a></div>
+      </div>
+    </section>
+    <section id="services" class="section services-section">
+      <div class="container"><div class="section-heading"><div><div class="eyebrow"><span></span> WHAT WE TAKE OFF YOUR PLATE</div><h2>The road is your job.<br>The details are ours.</h2></div><p>From finding the right freight to coordinating the delivery, get support for the work behind every mile.</p></div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-top"><svg class="service-icon"><use href="#route"/></svg><span>01</span></div><h3>Load sourcing<br>& route planning</h3><p>Find freight that fits your equipment and preferred lanes, with the next move in mind.</p><a href="#contact" aria-label="Ask about load sourcing and route planning">Let’s find your next load <span>↗</span></a></article>
+          <article class="service-card"><div class="service-top"><svg class="service-icon"><use href="#rates"/></svg><span>02</span></div><h3>Rate negotiation<br>& booking</h3><p>Have someone in your corner for rate discussions, load details, and booking coordination.</p><a href="#contact" aria-label="Ask about rate negotiation and booking">Make every mile count <span>↗</span></a></article>
+          <article class="service-card"><div class="service-top"><svg class="service-icon"><use href="#document"/></svg><span>03</span></div><h3>Paperwork<br>& coordination</h3><p>Keep carrier packets, rate confirmations, and load documents organized along the way.</p><a href="#contact" aria-label="Ask about paperwork and coordination">Leave the details to us <span>↗</span></a></article>
+          <article class="service-card"><div class="service-top"><svg class="service-icon"><use href="#headset"/></svg><span>04</span></div><h3>Driver support<br>& communication</h3><p>Stay connected through pickups, deliveries, and the changes that happen between them.</p><a href="#contact" aria-label="Ask about driver support and communication">Get a partner on the road <span>↗</span></a></article>
+        </div>
+      </div>
+    </section>
+    <section id="equipment" class="section equipment-section"><div class="container"><div class="section-heading"><div><div class="eyebrow"><span></span> DIFFERENT TRUCKS. THE SAME COMMITMENT.</div><h2>Built around your rig.</h2></div><a href="#contact" class="text-link dark-link">Tell us what you drive <span>↗</span></a></div>
+      <div class="equipment-grid">
+        <article class="equipment-card"><div class="rig-illustration"><svg viewBox="0 0 320 125" aria-hidden="true"><path class="rig-body" d="M16 30h203v65H16zM225 55h34l22 24v16h-56z"/><path d="M240 60h16l14 17h-30zM22 83h190M219 93h62M38 35v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43m9-43v43"/><g class="rig-wheels"><circle cx="46" cy="97" r="12"/><circle cx="75" cy="97" r="12"/><circle cx="204" cy="97" r="12"/><circle cx="260" cy="97" r="12"/></g></svg></div><div class="equipment-text"><span>01 / ENCLOSED FREIGHT</span><h3>Dry van</h3><p>Everyday freight. Well-planned routes.<br>Keep your next load in sight.</p></div></article>
+        <article class="equipment-card"><div class="rig-illustration"><svg viewBox="0 0 320 125" aria-hidden="true"><path class="rig-body" d="M16 30h193v65H16zM225 55h34l22 24v16h-56zM210 38h12v43h-12z"/><path d="M240 60h16l14 17h-30zM24 82h177M215 45v29M40 42v24m-10-18 20 12m-20 0 20-12M62 42v24m-10-18 20 12m-20 0 20-12M86 42h107M86 50h107M86 58h107"/><g class="rig-wheels"><circle cx="46" cy="97" r="12"/><circle cx="75" cy="97" r="12"/><circle cx="204" cy="97" r="12"/><circle cx="260" cy="97" r="12"/></g></svg></div><div class="equipment-text"><span>02 / TEMPERATURE-CONTROLLED</span><h3>Reefer</h3><p>Time-sensitive loads deserve<br>detail-focused coordination.</p></div></article>
+        <article class="equipment-card"><div class="rig-illustration"><svg viewBox="0 0 320 125" aria-hidden="true"><path class="rig-body" d="M16 82h203v13H16zM225 55h34l22 24v16h-56zM36 46h145v35H36z"/><path d="M240 60h16l14 17h-30zM59 46v35m40-35v35m40-35v35M30 89h181M27 76v7m169-7v7"/><g class="rig-wheels"><circle cx="46" cy="97" r="12"/><circle cx="75" cy="97" r="12"/><circle cx="204" cy="97" r="12"/><circle cx="260" cy="97" r="12"/></g></svg></div><div class="equipment-text"><span>03 / OPEN-DECK FREIGHT</span><h3>Flatbed</h3><p>The right load for your setup,<br>with the details worked out ahead.</p></div></article>
+      </div><p class="equipment-note">Have a different setup? <a href="#contact">Let’s talk about your dispatch needs <span>↗</span></a></p>
+    </div></section>
+    <section class="coverage-section" id="coverage">
+      <div class="container coverage-grid">
+        <div><div class="eyebrow light"><span></span> LOCAL KNOWLEDGE. NATIONAL REACH.</div><h2>Wherever the road leads,<br>let’s move forward.</h2><p>From regional routes to long-haul lanes, Truck Ventures connects your operation with dispatch support across the United States.</p><a href="#contact" class="button button-lime">Find your next direction <svg class="icon"><use href="#arrow"/></svg></a></div>
+        <div class="route-visual dispatch-visual" role="img" aria-label="Traveling dots show dispatch routes connecting the West Coast, Midwest, South, and East Coast">
+          <span class="route-word">USA</span>
+          <svg viewBox="0 0 520 260" aria-hidden="true">
+            <path id="dispatch-route-north" class="route-line" d="M45 180C130 180 100 75 220 75S300 190 380 150s45-90 100-90"/>
+            <path id="dispatch-route-south" class="route-line secondary" d="M45 180c180 0 120 70 245 35S360 75 480 60"/>
+            <g class="route-beacons"><circle cx="45" cy="180" r="10"/><circle cx="220" cy="75" r="10"/><circle cx="290" cy="215" r="10"/><circle cx="480" cy="60" r="10"/></g>
+            <g class="route-packet"><circle class="route-packet-halo" r="9"/><circle class="route-packet-core" r="3.5"/><animateMotion dur="8s" begin="0s" repeatCount="indefinite" calcMode="paced"><mpath href="#dispatch-route-north"/></animateMotion></g>
+            <g class="route-packet"><circle class="route-packet-halo" r="9"/><circle class="route-packet-core" r="3.5"/><animateMotion dur="8s" begin="-4s" repeatCount="indefinite" calcMode="paced"><mpath href="#dispatch-route-north"/></animateMotion></g>
+            <g class="route-packet"><circle class="route-packet-halo" r="9"/><circle class="route-packet-core" r="3.5"/><animateMotion dur="10s" begin="-2s" repeatCount="indefinite" calcMode="paced"><mpath href="#dispatch-route-south"/></animateMotion></g>
+            <g class="route-packet"><circle class="route-packet-halo" r="9"/><circle class="route-packet-core" r="3.5"/><animateMotion dur="10s" begin="-7s" repeatCount="indefinite" calcMode="paced"><mpath href="#dispatch-route-south"/></animateMotion></g>
+            <g class="route-nodes"><circle cx="45" cy="180" r="7"/><circle cx="220" cy="75" r="7"/><circle cx="290" cy="215" r="7"/><circle cx="480" cy="60" r="7"/></g>
+            <g class="route-labels"><text x="20" y="213">WEST COAST</text><text x="184" y="49">MIDWEST</text><text x="271" y="249">SOUTH</text><text x="409" y="34">EAST COAST</text></g>
+          </svg>
+          <span class="route-visual-caption"><span class="status-dot"></span> YOUR NEXT OPPORTUNITY IS OUT THERE.</span>
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works" class="section process-section"><div class="container"><div class="section-heading"><div><div class="eyebrow"><span></span> A SIMPLE START</div><h2>Three steps.<br>A better road ahead.</h2></div><p>Getting to know your business is where good dispatch begins. Here’s how we get moving together.</p></div><div class="process-grid"><article><div class="step-number">01<span>↗</span></div><h3>Tell us about your business.</h3><p>Share your equipment type, preferred routes, and what you’re looking for in a dispatch partner.</p></article><article><div class="step-number">02<span>↗</span></div><h3>Let’s make a plan.</h3><p>We’ll talk through your needs, service details, and onboarding documents together.</p></article><article><div class="step-number">03<span>✓</span></div><h3>Get ready for your next load.</h3><p>Once everything is in place, we work on finding and coordinating freight for your operation.</p></article></div></div></section>
+    <section class="section faq-section"><div class="container faq-grid"><div><div class="eyebrow"><span></span> A FEW THINGS TO KNOW</div><h2>Good questions.<br>Straight answers.</h2><p>Every operation is different.<br>Let’s talk through yours.</p><a href="#contact" class="text-link dark-link">Ask us anything <span>↗</span></a></div><div class="faq-list"><details open><summary>Who can work with Truck Ventures?<span></span></summary><p>We welcome conversations with owner-operators, independent drivers, and fleet owners. Tell us about your equipment and operation so we can discuss the right dispatch support.</p></details><details><summary>Can I choose my preferred routes?<span></span></summary><p>Yes. Your preferred lanes, home-time needs, and equipment are part of our planning conversation. Available freight and load details are discussed with you before a booking is confirmed.</p></details><details><summary>What do I need to get started?<span></span></summary><p>Start with your contact information, equipment type, and preferred routes. We’ll discuss your operation and walk you through any carrier documents needed for onboarding.</p></details><details><summary>How much does dispatching cost?<span></span></summary><p>Reach out to discuss your equipment, fleet size, and service needs. We’ll review pricing and service terms with you before you decide to get started.</p></details></div></div></section>
+    <section id="contact" class="section contact-section"><div class="container contact-grid"><div class="contact-copy"><div class="eyebrow"><span></span> LET’S GET YOU MOVING</div><h2>Your next chapter<br>starts with a<br><span>conversation.</span></h2><p>You bring the drive. We bring the dispatch support.<br>Tell us a little about your business, and let’s explore the road ahead together.</p><div class="contact-detail"><svg class="icon"><use href="#pin"/></svg><div><strong>Dispatching across the USA</strong><span>For independent drivers & growing fleets</span></div></div><div class="contact-signoff">GOOD PEOPLE. CLEAR COMMUNICATION. FORWARD MOTION.</div></div>
+      <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate><input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" hidden aria-hidden="true"><noscript><p>Enable JavaScript to send your inquiry.</p><style>#contact-form .submit-button{display:none}</style></noscript><h3>Let’s talk about your truck.</h3><p class="form-intro">Fill in the details below to request a callback.</p><div class="form-row"><div class="field"><label for="full-name">Full name <span>*</span></label><input id="full-name" name="name" autocomplete="name" placeholder="Your full name" required maxlength="100" aria-describedby="name-error"><span class="field-error" id="name-error"></span></div><div class="field"><label for="phone">Phone number <span>*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 000-0000" required maxlength="30" aria-describedby="phone-error"><span class="field-error" id="phone-error"></span></div></div><div class="field"><label for="email">Email address <span>*</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required maxlength="254" aria-describedby="email-error"><span class="field-error" id="email-error"></span></div><div class="form-row"><div class="field"><label for="equipment-type">Equipment type <span>*</span></label><select id="equipment-type" name="equipment" required aria-describedby="equipment-error"><option value="">Select equipment</option><option>Dry van</option><option>Reefer</option><option>Flatbed</option><option>Step deck</option><option>Box truck</option><option>Hotshot</option><option>Other</option></select><span class="field-error" id="equipment-error"></span></div><div class="field"><label for="fleet-size">Number of trucks</label><select id="fleet-size" name="fleetSize"><option value="">Select fleet size</option><option>1 truck</option><option>2–5 trucks</option><option>6–10 trucks</option><option>11+ trucks</option></select></div></div><div class="field"><label for="message">How can we help?</label><textarea id="message" name="message" rows="3" maxlength="2000" placeholder="Tell us about your preferred lanes and dispatch needs..."></textarea></div><label class="consent"><input type="checkbox" name="consent" id="consent" required aria-describedby="consent-error"><span>I agree to be contacted about my dispatch inquiry. <span aria-hidden="true">*</span></span></label><span class="field-error" id="consent-error"></span><button class="button button-dark submit-button" type="submit" disabled><span class="submit-label">Request a callback</span><svg class="icon"><use href="#arrow"/></svg></button><p class="form-note">Contact form activation is pending. Please check back shortly.</p><div id="form-status" class="form-status" role="status" tabindex="-1" hidden></div></form>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-main"><a class="brand footer-brand" href="#home" aria-label="Truck Ventures home"><svg class="brand-mark" viewBox="0 0 46 42" aria-hidden="true"><path d="M2 6h39l-6 9H24L11 37H0L14 15H2z"/><path d="m27 20-9 17h11l15-25H34z"/></svg><span>TRUCK<span class="brand-second">VENTURES<span class="brand-dot">.</span></span></span></a><p>Your road. Our commitment.</p><a href="#home" class="back-top">Back to top <span>↑</span></a></div><div class="container footer-bottom"><span class="footer-copyright">© <span id="year">2026</span> Truck Ventures LLC Pvt limited. All rights reserved.</span><nav aria-label="Footer navigation"><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Get in touch ↗</a></nav><span>Driven to move you forward.</span></div></footer>
+</body>
+</html>
